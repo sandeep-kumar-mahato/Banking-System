@@ -40,9 +40,17 @@ const Transaction = mongoose.model("Transaction", transactionSchema);
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Index page
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/", async (req, res) => {
+  try {
+    const customers = await Customer.find({});
+    res.render("index", {
+      customersList: customers,
+    });
+  } catch (err) {
+    console.error(err);
+  }
 });
+
 
 // Customers page
 app.get("/customers", async (req, res) => {
