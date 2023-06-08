@@ -80,36 +80,39 @@
     <div class="mt-4 p-5 bg-light rounded shadow-sm">
       <h2>Customers</h2>
     </div>
-    <table class="table table-striped text-center shadow-sm p-3 my-2 bg-body-tertiary rounded">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Current Balance</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% for (var i=0; i < Math.min(4, customersList.length); i++) { %>
+    <div class="table-responsive">
+      <table class="table table-striped text-center shadow-sm p-3 my-2 bg-body-tertiary rounded">
+        <thead>
           <tr>
-            <td>
-              <%= customersList[i].Name %>
-            </td>
-            <td>
-              <%= customersList[i].Email %>
-            </td>
-            <td>
-              <%= customersList[i].Current_Balance %>
-            </td>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Current Balance</th>
           </tr>
-          <% } %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% for (var i=0; i < Math.min(4, customersList.length); i++) { %>
+            <tr>
+              <td>
+                <%= customersList[i].Name %>
+              </td>
+              <td>
+                <%= customersList[i].Email %>
+              </td>
+              <td>
+                <%= customersList[i].Current_Balance %>
+              </td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+    </div>
     <div class="text-center">
-      <a href="/customers" class="btn btn-primary mt-1 text-dark  bg-success-subtle rounded shadow-lg border-0">
+      <a href="/customers" class="btn btn-primary mt-1 text-dark bg-success-subtle rounded shadow-lg border-0">
         View All Customers <i class="fas fa-arrow-right"></i>
       </a>
     </div>
   </div>
+
 
 
   <!-- Footer -->
