@@ -51,7 +51,6 @@ app.get("/", async (req, res) => {
   }
 });
 
-
 // Customers page
 app.get("/customers", async (req, res) => {
   try {
