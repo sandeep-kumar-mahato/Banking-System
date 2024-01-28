@@ -32,8 +32,13 @@ const transactionSchema = {
   sender: String,
   receiver: String,
   amount: Number,
-  timestamp: { type: Date, default: Date.now },
+  timestamp: {
+    type: Date,
+    default: () =>
+      new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" }),
+  },
 };
+
 
 const Transaction = mongoose.model("Transaction", transactionSchema);
 
