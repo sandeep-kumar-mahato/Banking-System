@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 
 mongoose
   .connect(
-    "mongodb+srv://admin:bv4EUr0tGBYSXaCg@cluster0.uzxxto4.mongodb.net/customersDB?retryWrites=true&w=majority"
+    "mongodb+srv://admin:eYxGUKl9azkCWEJb@cluster0.uzxxto4.mongodb.net/?retryWrites=true&w=majority"
   )
   .then(() => {
     console.log("Connected to MongoDB");
@@ -38,7 +38,6 @@ const transactionSchema = {
       new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" }),
   },
 };
-
 
 const Transaction = mongoose.model("Transaction", transactionSchema);
 
