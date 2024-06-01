@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 
 mongoose
   .connect(
-    "mongodb+srv://admin:eYxGUKl9azkCWEJb@cluster0.uzxxto4.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://admin:PY0PV1r3xRKY4tu6@cluster0.uzxxto4.mongodb.net/customersDB?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => {
     console.log("Connected to MongoDB");
