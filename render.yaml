@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: Banking System
+    env: node
+    region: oregon
+    buildCommand: 'npm install'
+    startCommand: 'node your-entry-file.js'
+    envVars:
+      - key: DATABASE_URL
+        value: mongodb+srv://admin:PY0PV1r3xRKY4tu6@cluster0.uzxxto4.mongodb.net/customersDB?retryWrites=true&w=majority&appName=Cluster0
